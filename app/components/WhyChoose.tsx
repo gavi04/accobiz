@@ -9,7 +9,7 @@ export default function WhyChoose() {
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-linear-to-b from-orange-40 to-white">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-zinc-900 sm:text-4xl">Why Choose Accobiz?</h2>

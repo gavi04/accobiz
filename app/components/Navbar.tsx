@@ -2,15 +2,16 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { START_TRIAL_URL } from '../lib/const';
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const links = [
-    { label: 'Home', href: '/' },
-    { label: 'Pricing', href: 'pricing' },
+    { label: 'Home', href: '/#' },
+    { label: 'Pricing', href: '/#pricing' },
     { label: 'About', href: '/#about' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Contact', href: '/#contact' },
   ];
 
   return (
@@ -39,14 +40,11 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
+          
           <a
-            href="#"
-            className="text-sm font-medium text-zinc-700 hover:text-zinc-900 transition-colors"
-          >
-            Log in
-          </a>
-          <a
-            href="#"
+            href={START_TRIAL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg bg-orange-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-orange-600 transition-colors"
           >
             Get Started
@@ -81,7 +79,9 @@ export default function Navbar() {
               Log in
             </a>
             <a
-              href="#"
+              href={START_TRIAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg bg-orange-500 px-4 py-2 text-sm font-medium text-white text-center"
             >
               Get Started

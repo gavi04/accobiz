@@ -7,6 +7,7 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ProblemsAndSolutions from './components/ProblemAndSolutions';
 import Pricing from './components/Pricing';
+import InterfacePage from './interface/page';
 export default function Home() {
   return (
     <div className="min-h-screen bg-white font-sans text-zinc-900 flex flex-col">
@@ -15,10 +16,10 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
 
-        <TrustBar />
-
+        {/* <TrustBar /> */}
+        
         <WhyChoose />
-
+        <InterfacePage/>
         <ProblemsAndSolutions />
 
         <Pricing />

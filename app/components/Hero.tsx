@@ -1,5 +1,6 @@
-import { ArrowRight, CheckCircle, Play } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
+import { START_TRIAL_URL, CONTACT_SALES_URL } from "../lib/const";
 
 type Props = {
   title?: string;
@@ -11,7 +12,7 @@ export default function Hero({
   subtitle = 'designed exclusively for Indian businesses. Save hours on bookkeeping and GST filings.',
 }: Props) {
   return (
-    <header className="w-full bg-gradient-to-b from-white to-zinc-50">
+    <header className="w-full bg-linear-to-b from-white to-orange-40">
       <div className="mx-auto max-w-6xl px-6 py-14 lg:py-12">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           {/* Left Content */}
@@ -29,18 +30,19 @@ export default function Hero({
             {/* CTA Buttons */}
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
               <a
-                href="#"
+                href={START_TRIAL_URL}
+                target="_blank"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-orange-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-orange-500/25 transition-all hover:bg-orange-600 hover:shadow-orange-500/30"
               >
                 Start Free Trial
                 <ArrowRight size={18} />
               </a>
               <a
-                href="#demo"
+                href={CONTACT_SALES_URL}
+                target="_blank"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-300 bg-white px-6 py-3.5 text-base font-semibold text-zinc-700 transition-all hover:border-zinc-400 hover:bg-zinc-50"
               >
-                <Play size={18} />
-                Watch Demo
+               Contact Sales
               </a>
             </div>
 
