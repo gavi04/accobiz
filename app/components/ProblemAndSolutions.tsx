@@ -1,4 +1,4 @@
-import { FileText, CreditCard, TrendingUp, Shield, AlertTriangle, Clock, Eye, Users } from 'lucide-react';
+import { FileText, CreditCard, TrendingUp, Shield, AlertTriangle, Clock, Eye, Users ,User } from 'lucide-react';
 
 type Feature = {
   title: string;
@@ -10,7 +10,8 @@ const problems: Feature[] = [
   { title: 'Scattered data', text: 'Data scattered across Excel, Tally, and files.', icon: <AlertTriangle size={24} /> },
   { title: 'Late GST returns', text: 'Late GST returns and tax errors.', icon: <Clock size={24} /> },
   { title: 'No real-time view', text: 'No real-time view of profit & cash flow.', icon: <Eye size={24} /> },
-  { title: 'Dependence on accountants', text: 'Dependence on accountants for basic information.', icon: <Users size={24} /> },
+  { title: 'Dependence on staff', text: 'Dependence on staff for basic information.', icon: <User size={24} /> },
+  { title: 'No real time user management', text: 'No real time user management.', icon: <Users size={24} /> },
 ];
 
 const solutions: Feature[] = [
@@ -18,6 +19,8 @@ const solutions: Feature[] = [
   { title: 'Track payments', text: 'Track payments, expenses, and dues.', icon: <CreditCard size={24} /> },
   { title: 'Monitor cash flow', text: 'Monitor cash flow and profitability in real time.', icon: <TrendingUp size={24} /> },
   { title: 'Compliance & reports', text: 'Generate financial statements and stay GST compliant.', icon: <Shield size={24} /> },
+  { title: 'Real-time user management', text: 'Manage users in real time.', icon: <Users size={24} /> },
+
 ];
 
 function Block({ item, variant }: { item: Feature; variant: 'problem' | 'solution' }) {
